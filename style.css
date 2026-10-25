@@ -1,0 +1,99 @@
+@layer utility, component;
+@layer component {
+  .header__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    @media (min-width: calc(1200 / 16 * 1rem)) {
+      padding: 20px 120px;
+    }
+  }
+  .header {
+    background-color: var(--c-blue);
+  }
+  .header-list {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    gap: 1rem;
+  }
+  .header-list li a {
+    color: var(--c-white);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    font-size: calc(14 / 16 * 1rem);
+    @media (min-width: calc(1200 / 16 * 1rem)) {
+      font-size: calc(16 / 16 * 1rem);
+    }
+  }
+  .header-home {
+    width: calc(70 / 16 * 1rem);
+    height: auto;
+    @media (min-width: calc(1200 / 16 * 1rem)) {
+      width: calc(128 / 16 * 1rem);
+    }
+  }
+}
+
+@layer utility {
+  :root {
+    --c-white: #ffffff;
+    --c-blue: #495bcf;
+    --c-teal: #00d3d4;
+    --c-grey: #383a4a;
+    --c-transparent: transparent;
+    --c-purple: #bf1085;
+
+    --header-text-color: var(var(--c-white));
+    --header-background-color: var(var(--c-blue));
+    --primary-home-button-bg-color: var(var(--c-teal));
+    --primary-home-button-text-color: var(var(--c-grey));
+    --secondary-home-button-bg-color: var(var(--c-transparent));
+    --secondary-home-text-color: var(var(--c-white));
+    --features-text-color: var(--c-grey);
+
+    /* sizes */
+
+    --pic-width: 70 / 16 * 1rem;
+    --header-link: 14 / 16 * 1rem;
+    --home-h1: 42 / 16 * 1rem;
+    --home-p: @media (min-width: ) {};
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", Courier, monospace;
+  }
+  body {
+    color: var(--c-white);
+  }
+  a {
+    text-decoration: none;
+  }
+  img,
+  picture,
+  svg {
+    display: block;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+  }
+  .skip:focus {
+    left: 0;
+    width: auto;
+    height: auto;
+  }
+  .wrapper {
+    width: min(calc(100% - 48px), calc(1200 / 16 * 1rem));
+    margin-inline: auto;
+  }
+}
