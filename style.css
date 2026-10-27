@@ -101,6 +101,97 @@
       }
     }
   }
+  .features-section {
+    background-color: var(--c-white);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media (min-width: calc(1200 / 16 * 1rem)) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    .features-mother-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+
+      @media (min-width: calc(1200 / 16 * 1rem)) {
+        flex-direction: row;
+        gap: 80px;
+        width: calc(100% - 239px);
+      }
+    }
+    .features-box {
+    }
+    .features-box .features-icon,
+    .features-text,
+    .features-small-text {
+      margin-top: 10px;
+    }
+    .features-icon {
+      width: 43px;
+      height: auto;
+      margin-inline: auto;
+      @media (min-width: calc(1200 / 16 * 1rem)) {
+        margin-inline: 0;
+      }
+    }
+    .features-text {
+      font-size: calc(24 / 16 * 1rem);
+      color: var(--c-grey);
+      text-align: center;
+      @media (min-width: calc(1200 / 16 * 1rem)) {
+        text-align: start;
+      }
+    }
+    .features-small-text {
+      font-size: calc(18 / 16 * 1rem);
+      color: var(--c-grey);
+      text-align: center;
+      @media (min-width: calc(1200 / 16 * 1rem)) {
+        text-align: start;
+      }
+    }
+  }
+  .angel-investment-matching {
+    background-color: var(--c-purple);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media (min-width: calc(1200 / 16 * 1rem)) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    .angel-investment {
+      @media (min-width: calc(1200 / 16 * 1rem)) {
+        widt: calc(100% - 218px);
+      }
+    }
+    .angel-text {
+      color: var(--c-white);
+      text-align: center;
+      font-size: calc(36 / 16 * 1rem);
+      @media (min-width: calc(1200 / 16 * 1rem)) {
+        font-size: calc(48 / 16 * 1rem);
+      }
+    }
+    .angel-small-text {
+      margin-top: 20px;
+      margin-bottom: 40px;
+      color: var(--c-white);
+      text-align: center;
+      font-size: calc(20 / 16 * 1rem);
+      @media (min-width: calc(1200 / 16 * 1rem)) {
+        font-size: calc(24 / 16 * 1rem);
+      }
+    }
+    .angel-laptop {
+      width: calc(325 / 16 * 1rem);
+      margin-inline: auto;
+      @media (min-width: calc(1200 / 16 * 1rem)) {
+        width: calc(792 / 16 * 1rem);
+      }
+    }
+  }
 }
 
 @layer utility {
