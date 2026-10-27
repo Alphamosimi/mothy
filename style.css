@@ -36,6 +36,71 @@
       width: calc(128 / 16 * 1rem);
     }
   }
+  .hero-section {
+    background-color: var(--c-blue);
+    padding-top: 30px;
+
+    .hero-image {
+      margin-inline: auto;
+      width: calc(159.24 / 16 * 1rem);
+      height: auto;
+      @media (min-width: calc(1200 / 16 * 1rem)) {
+        width: calc(483 / 16 * 1rem);
+      }
+    }
+    .hero-text {
+      font-size: calc(42 / 16 * 1rem);
+      font-weight: bold;
+      @media (min-width: calc(1200 / 16 * 1rem)) {
+        font-size: calc(72 / 16 * 1rem);
+      }
+    }
+    .hero-small-text {
+      font-size: calc(24 / 16 * 1rem);
+      font-weight: normal;
+      margin-block-start: 12px;
+      @media (min-width: calc(1200 / 16 * 1rem)) {
+        font-size: calc(28 / 16 * 1rem);
+        margin-block-start: 20px;
+      }
+    }
+    .hero-left-side {
+      padding: 0.5px;
+    }
+    .hero-buttons {
+      display: flex;
+      margin-top: 40px;
+      margin-bottom: 60px;
+      justify-content: flex-start;
+      gap: 20px;
+      align-items: center;
+    }
+    .hero-primary-button {
+      font-weight: bold;
+      font-size: calc(18 / 16 * 1rem);
+      padding: 12px 16px;
+      border-radius: 24px;
+      color: var(--c-grey);
+      background-color: var(--c-teal);
+    }
+    .hero-secondary-button {
+      font-weight: bold;
+      font-size: calc(18 / 16 * 1rem);
+      padding: 12px 16px;
+      border-radius: 24px;
+      color: var(--c-white);
+      background-color: var(--c-transparent);
+      border: 2px var(--c-white) solid;
+    }
+    .split {
+      @media (min-width: calc(1200 / 16 * 1rem)) {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: calc(123 / 16 * 1rem);
+        width: calc(100% - 240px);
+      }
+    }
+  }
 }
 
 @layer utility {
@@ -66,7 +131,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Courier New", Courier, monospace;
+    font-family: sans-serif;
   }
   body {
     color: var(--c-white);
@@ -78,6 +143,7 @@
   picture,
   svg {
     display: block;
+    height: auto;
   }
 
   .visually-hidden {
